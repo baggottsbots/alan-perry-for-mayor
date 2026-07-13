@@ -590,16 +590,127 @@
                 <span>I agree to be contacted by the campaign by email, phone, or text.</span>
               </label>
 
+              <div id="formError" class="hidden rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800"></div>
+
               <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <button id="submitBtn" type="submit" class="inline-flex items-center justify-center rounded-full bg-[var(--navy)] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0c2238] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]">Send Message</button>
                 <p class="text-xs leading-5 text-slate-500">By submitting, you agree the campaign may contact you using the information provided.</p>
               </div>
-
-              <div id="formStatus" class="hidden rounded-2xl border p-4 text-sm"></div>
             </form>
+
+            <div id="successPanel" class="hidden flex flex-col items-center justify-center text-center py-12 px-4">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 mb-5">
+                <svg class="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">You’re all set!</h3>
+              <p class="mt-3 text-base text-slate-600 max-w-md leading-relaxed">
+                Thanks for reaching out. Your information was received successfully, and the campaign team will be in touch soon.
+              </p>
+              <button id="resetFormBtn" type="button" class="mt-8 inline-flex items-center justify-center rounded-full bg-[var(--teal)] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-teal-300">
+                Submit another response
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const form = document.getElementById('leadForm');
+          const successPanel = document.getElementById('successPanel');
+          const formError = document.getElementById('formError');
+          const submitBtn = document.getElementById('submitBtn');
+          const resetBtn = document.getElementById('resetFormBtn');
+
+          if (!form) return;
+
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            formError.classList.add('hidden');
+            formError.textContent = '';
+
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              return;
+            }
+
+            const formData = new FormData(form);
+            const contactName = formData.get('contactName');
+            const contactEmail = formData.get('contactEmail');
+            const contactPhone = formData.get('contactPhone') || '';
+            const neighborhood = formData.get('neighborhood') || '';
+            const interest = formData.get('interest') || '';
+            const message = formData.get('message') || '';
+            const source = formData.get('source') || 'Campaign Website';
+            const consent = form.querySelector('#consent')?.checked || false;
+
+            const payload = {
+              contactName,
+              contactEmail,
+              contactPhone,
+              neighborhood,
+              interest,
+              message,
+              source,
+              consent,
+              data: {
+                neighborhood,
+                interest,
+                message,
+                source,
+                consent
+              }
+            };
+
+            submitBtn.disabled = true;
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = `
+              <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg> Sending...`;
+
+            try {
+              const actionUrl = form.getAttribute('action') || 'https://formspree.io/f/xoqgkyrj';
+              
+              const response = await fetch(actionUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+              });
+
+              if (!response.ok) {
+                throw new Error('Form submission failed. Please try again.');
+              }
+
+              form.reset();
+              form.classList.add('hidden');
+              successPanel.classList.remove('hidden');
+              successPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } catch (error) {
+              formError.textContent = error.message || 'An error occurred. Please try again.';
+              formError.classList.remove('hidden');
+            } finally {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
+          });
+
+          if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+              successPanel.classList.add('hidden');
+              form.classList.remove('hidden');
+              form.reset();
+            });
+          }
+        });
+      </script>
     </section>
   </main>
 
