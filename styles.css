@@ -1,0 +1,42 @@
+/* ===== GLOBAL THEME STYLES ===== */
+    /* Coastal campaign palette: navy, teal, sand, and white with subtle motion */
+    :root{
+      --navy:#0f2b46;
+      --teal:#4bb7b1;
+      --sand:#efe2cc;
+      --seafoam:#d8f1ee;
+      --ink:#102033;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top, rgba(75,183,177,.14), transparent 28%),
+        linear-gradient(180deg, #f8fbfc 0%, #ffffff 38%, #f7f3ed 100%);
+    }
+    .text-shadow-soft { text-shadow: 0 1px 2px rgba(0,0,0,.14); }
+    .glass-card {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 12px 30px rgba(15,43,70,.08);
+    }
+    .hero-waterline {
+      background:
+        linear-gradient(180deg, rgba(15,43,70,.94), rgba(15,43,70,.78)),
+        radial-gradient(circle at 20% 20%, rgba(75,183,177,.35), transparent 28%),
+        linear-gradient(135deg, #0f2b46 0%, #1d4666 50%, #2d6b7b 100%);
+    }
+    .island-horizon {
+      background:
+        radial-gradient(ellipse at center 78%, rgba(239,226,204,.9) 0 8%, transparent 9%),
+        linear-gradient(180deg, rgba(255,255,255,0) 0 60%, rgba(239,226,204,.85) 60% 100%);
+    }
+    .section-heading::after{
+      content:"";
+      display:block;
+      width:72px;
+      height:4px;
+      margin-top:.75rem;
+      border-radius:999px;
+      background: linear-gradient(90deg, var(--teal), var(--sand));
+    }
