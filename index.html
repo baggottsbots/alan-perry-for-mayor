@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/alan-perry-for-mayor/">
+<!-- BASE:END -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+
+<!-- SEO Meta Tags -->
+<title>Alan Perry for Mayor | Hilton Head Island</title>
+<meta name="description" content="Learn about Alan Perry’s record, priorities, and re-election campaign for Mayor of Hilton Head Island." />
+<meta property="og:title" content="Alan Perry for Mayor | Hilton Head Island" />
+<meta property="og:description" content="Learn about Alan Perry’s record, priorities, and re-election campaign for Mayor of Hilton Head Island." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Alan Perry for Mayor | Hilton Head Island" />
+<meta name="twitter:description" content="Learn about Alan Perry’s record, priorities, and re-election campaign for Mayor of Hilton Head Island." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mril6nvj-rdf5x";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://my.chatbees.io/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=5480');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='SxHLjhPQw';
+  var apiBase='https://my.chatbees.io';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='SxHLjhPQw';
+  var apiBase='https://my.chatbees.io';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased">
+  <!-- ============================================================================ -->
+  <!-- STICKY NAVIGATION: Home, Record, Priorities, About, Get Involved             -->
+  <!-- Features: Mobile menu, prominent campaign CTA, keyboard accessible links     -->
+  <!-- Mobile Padding: Ensures links and buttons stay clear of viewport edges       -->
+  <!-- ============================================================================ -->
+  <nav data-section="navbar" class="sticky top-0 z-50 border-b border-white/60 bg-white/90 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 py-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-4">
+        <a href="#home" class="group flex items-center gap-3 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">
+          <div class="grid h-11 w-11 place-items-center rounded-full bg-[var(--navy)] text-white shadow-md">
+            <span class="text-lg font-bold">AP</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--navy)]">Alan Perry for Mayor</p>
+            <p class="text-xs text-slate-600">Hilton Head Island</p>
+          </div>
+        </a>
+
+        <button class="nav-menu-toggle inline-flex items-center rounded-lg border border-slate-200 px-3 py-2 text-sm font-medium text-[var(--navy)] md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500" aria-controls="site-menu" aria-expanded="false" type="button" id="menuBtn">
+          Menu
+        </button>
+
+        <div id="site-menu" class="hidden md:block">
+          <div class="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+            <a href="#home" class="text-sm font-medium text-slate-700 hover:text-[var(--navy)]">Home</a>
+            <a href="#record" class="text-sm font-medium text-slate-700 hover:text-[var(--navy)]">Record</a>
+            <a href="#priorities" class="text-sm font-medium text-slate-700 hover:text-[var(--navy)]">Priorities</a>
+            <a href="#about" class="text-sm font-medium text-slate-700 hover:text-[var(--navy)]">About</a>
+            <a href="#get-involved" class="text-sm font-medium text-slate-700 hover:text-[var(--navy)]">Get Involved</a>
+            <a href="#get-involved" class="inline-flex items-center justify-center rounded-full bg-[var(--teal)] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">Join the Campaign</a>
+          </div>
+        </div>
+      </div>
+      <div id="mobileMenu" class="mt-4 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:hidden">
+        <div class="flex flex-col gap-3">
+          <a href="#home" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">Home</a>
+          <a href="#record" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">Record</a>
+          <a href="#priorities" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">Priorities</a>
+          <a href="#about" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">About</a>
+          <a href="#get-involved" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">Get Involved</a>
+          <a href="#get-involved" class="rounded-full bg-[var(--teal)] px-5 py-3 text-center text-sm font-semibold text-white">Join the Campaign</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <!-- ============================================================================ -->
+    <!-- HERO SECTION: Campaign headline, supporting copy, and coastal visual         -->
+    <!-- Features: Refined island scene, strong CTA buttons, modern and credible      -->
+    <!-- Mobile Padding: Headline and copy remain fully visible at 375px width        -->
+    <!-- ============================================================================ -->
+    <section data-section="hero" class="hero-section relative overflow-hidden">
+      <div class="hero-waterline absolute inset-0"></div>
+      <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--sand)] to-transparent"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:px-6 md:py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
+        <div class="max-w-2xl text-white">
+          <p class="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white/90">Re-election campaign for Mayor of Hilton Head Island</p>
+          <h1 class="text-shadow-soft text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Protecting Our Island. Continuing the Progress.</h1>
+          <p class="mt-6 max-w-xl text-base leading-7 text-white/90 sm:text-lg">
+            Alan Perry’s campaign is focused on thoughtful growth, public safety, resilient infrastructure, stormwater management, environmental stewardship, transparent communication, and collaborative leadership that keeps Hilton Head Island strong.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#record" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[var(--navy)] shadow-md transition hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">See the Record</a>
+            <a href="#get-involved" class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Get Involved</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="glass-card island-horizon overflow-hidden rounded-[2rem] border border-white/40 p-5 md:p-6">
+            <div class="rounded-[1.5rem] bg-gradient-to-b from-[#1a4a68] to-[#5ea7b1] p-5 shadow-lg">
+              <div class="h-64 rounded-[1.25rem] bg-gradient-to-b from-sky-200 via-cyan-100 to-[var(--sand)] shadow-inner">
+                <div class="relative h-full overflow-hidden rounded-[1.25rem]">
+                  <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#dff5fb] to-transparent"></div>
+                  <div class="absolute inset-x-0 bottom-0 h-[36%] bg-[var(--sand)]"></div>
+                  <div class="absolute left-6 right-6 top-18 h-16 rounded-full bg-white/70 blur-2xl"></div>
+                  <div class="absolute bottom-[20%] left-0 right-0 h-10 bg-[#1d6c6d]/85"></div>
+                  <div class="absolute bottom-[25%] left-[12%] h-20 w-2 rounded-full bg-[#9a7a4f]"></div>
+                  <div class="absolute bottom-[27%] left-[12%] h-7 w-10 rounded-full bg-[#2f7d57]"></div>
+                  <div class="absolute bottom-[26%] left-[18%] h-6 w-8 rounded-full bg-[#3f8f63]"></div>
+                  <div class="absolute bottom-[24%] left-[26%] h-24 w-2 rounded-full bg-[#9a7a4f]"></div>
+                  <div class="absolute bottom-[28%] left-[24%] h-8 w-12 rounded-full bg-[#2c7a55]"></div>
+                  <div class="absolute bottom-[30%] right-[14%] h-28 w-2 rounded-full bg-[#9a7a4f]"></div>
+                  <div class="absolute bottom-[34%] right-[16%] h-7 w-10 rounded-full bg-[#2f7d57]"></div>
+                  <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white/35 to-transparent"></div>
+                </div>
+              </div>
+              <div class="mt-4 grid grid-cols-3 gap-3 text-center text-white">
+                <div class="rounded-2xl bg-white/12 p-3">
+                  <p class="text-xs uppercase tracking-[0.2em] text-white/70">Focus</p>
+                  <p class="mt-1 text-sm font-semibold">Island First</p>
+                </div>
+                <div class="rounded-2xl bg-white/12 p-3">
+                  <p class="text-xs uppercase tracking-[0.2em] text-white/70">Style</p>
+                  <p class="mt-1 text-sm font-semibold">Practical</p>
+                </div>
+                <div class="rounded-2xl bg-white/12 p-3">
+                  <p class="text-xs uppercase tracking-[0.2em] text-white/70">Approach</p>
+                  <p class="mt-1 text-sm font-semibold">Collaborative</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- RECORD / PROGRESS SECTION: Verified initiatives and public work              -->
+    <!-- Features: Clean cards, transparent attribution, collaboration note           -->
+    <!-- ============================================================================ -->
+    <section data-section="record" id="record" class="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="section-heading text-3xl font-bold tracking-tight text-[var(--navy)] sm:text-4xl">Progress During This Term</h2>
+        <p class="mt-4 text-base leading-7 text-slate-700">
+          During Mayor Perry’s term, the Town Council adopted and advanced a number of important initiatives shaped by public input, Town staff expertise, and community partners. The work below reflects collaborative municipal leadership and steady progress on long-term priorities.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-[var(--navy)]">FY2026–2028 Strategic Action Plan</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">Town Council adopted a forward-looking strategic framework to guide priorities, accountability, and public reporting across major Town functions.</p>
+        </article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-[var(--navy)]">Fire Rescue, EOC, and Dispatch Planning</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">Planning advanced for a consolidated Fire Rescue Headquarters, Emergency Operations Center, and Dispatch Center to improve coordination and readiness.</p>
+        </article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-[var(--navy)]">Local Procurement Access</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">The Town expanded procurement opportunities for local, small, and minority-owned businesses to support a broader and more resilient local economy.</p>
+        </article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-[var(--navy)]">A-Tax and Affiliated Agencies</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">Improvements were made to accommodations tax grant and affiliated-agency processes to strengthen transparency, clarity, and administration.</p>
+        </article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-[var(--navy)]">Beach Renourishment Strategy</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">Long-term beach renourishment planning and funding strategy remained a priority to protect the island’s shoreline, tourism economy, and resilience.</p>
+        </article>
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-lg font-semibold text-[var(--navy)]">Integrated Pest Management & Dashboards</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-700">The Town adopted South Carolina’s first municipal Integrated Pest Management Policy and launched public dashboards for strategy, capital projects, and budget progress.</p>
+        </article>
+      </div>
+
+      <div class="mt-8 rounded-3xl border border-teal-100 bg-[var(--seafoam)] p-5 text-sm leading-6 text-slate-700">
+        <strong class="text-[var(--navy)]">Note:</strong> Major initiatives are accomplished through collaboration among the Mayor, Town Council, Town staff, and community partners.
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- PRIORITIES SECTION: Six concise campaign pillars                              -->
+    <!-- Features: Clear, scannable cards for voters on mobile and desktop            -->
+    <!-- ============================================================================ -->
+    <section data-section="priorities" id="priorities" class="bg-white/80">
+      <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h2 class="section-heading text-3xl font-bold tracking-tight text-[var(--navy)] sm:text-4xl">Campaign Priorities</h2>
+          <p class="mt-4 text-base leading-7 text-slate-700">A practical agenda for protecting Hilton Head Island’s character while planning responsibly for the future.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-lg font-semibold text-[var(--navy)]">Protect Island Character</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-700">Keep Hilton Head Island’s natural beauty, scale, and community identity at the center of every decision.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-lg font-semibold text-[var(--navy)]">Manage Growth Thoughtfully</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-700">Use careful planning, clear standards, and public process to guide development that fits the island.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-lg font-semibold text-[var(--navy)]">Strengthen Public Safety &amp; Resilience</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-700">Support emergency readiness, modern facilities, and coordinated response for storms and public safety needs.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-lg font-semibold text-[var(--navy)]">Invest in Stormwater &amp; Infrastructure</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-700">Prioritize drainage, roads, and capital planning that protect neighborhoods and improve reliability.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-lg font-semibold text-[var(--navy)]">Support Local Economic Opportunity</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-700">Expand access for local businesses and strengthen a diverse, island-based economy.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-lg font-semibold text-[var(--navy)]">Keep Residents Informed</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-700">Maintain transparent communication, public dashboards, and steady updates people can trust.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- ABOUT SECTION: Verified biography only                                       -->
+    <!-- Features: Clean, restrained profile with no unverified details               -->
+    <!-- ============================================================================ -->
+    <section data-section="about" id="about" class="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+        <div>
+          <h2 class="section-heading text-3xl font-bold tracking-tight text-[var(--navy)] sm:text-4xl">About Alan Perry</h2>
+          <p class="mt-4 text-base leading-7 text-slate-700">
+            Alan Perry is a longtime Hilton Head Island resident who was elected Mayor in November 2022. Before serving as Mayor, he served on the Town Planning Commission, including as vice chair. His campaign is rooted in public service, local knowledge, and a practical approach to leadership.
+          </p>
+          <p class="mt-4 text-base leading-7 text-slate-700">
+            The focus remains on careful planning, honest communication, and decisions that reflect the needs of residents, businesses, and the island’s long-term future.
+          </p>
+        </div>
+        <div class="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-[var(--seafoam)] p-6 shadow-sm">
+          <div class="rounded-[1.5rem] border border-white bg-white p-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--teal)]">Leadership values</p>
+            <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+              <li>• Collaborative decision-making</li>
+              <li>• Transparent public process</li>
+              <li>• Respect for island character</li>
+              <li>• Preparedness and resilience</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- GET INVOLVED SECTION: Lead form with success state                            -->
+    <!-- Features: Required consent checkbox, accessible labels, elegant submission   -->
+    <!-- Form Integration: Fetches to webhook and shows inline success/error states    -->
+    <!-- ============================================================================ -->
+    <section data-section="get-involved" id="get-involved" class="bg-white/80">
+      <div class="mx-auto max-w-7xl px-4 py-16 md:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[.95fr_1.05fr]">
+          <div>
+            <h2 class="section-heading text-3xl font-bold tracking-tight text-[var(--navy)] sm:text-4xl">Get Involved</h2>
+            <p class="mt-4 text-base leading-7 text-slate-700">
+              Share your interest and the campaign will follow up with relevant updates, volunteer opportunities, yard sign support, event information, and ways to stay connected.
+            </p>
+            <div class="mt-6 rounded-3xl border border-slate-200 bg-[var(--seafoam)] p-6 text-sm leading-6 text-slate-700">
+              We respect your privacy and will only use your information for campaign communication.
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm md:p-8">
+            <form id="leadForm" class="contact-form space-y-5" novalidate>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="full_name" class="mb-2 block text-sm font-medium text-slate-800">Full Name *</label>
+                  <input id="full_name" name="contactName" type="text" required class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--teal)] focus:ring-2 focus:ring-teal-200" />
+                </div>
+                <div>
+                  <label for="email" class="mb-2 block text-sm font-medium text-slate-800">Email *</label>
+                  <input id="email" name="contactEmail" type="email" required class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--teal)] focus:ring-2 focus:ring-teal-200" />
+                </div>
+                <div>
+                  <label for="phone" class="mb-2 block text-sm font-medium text-slate-800">Phone</label>
+                  <input id="phone" name="contactPhone" type="tel" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--teal)] focus:ring-2 focus:ring-teal-200" />
+                </div>
+                <div>
+                  <label for="neighborhood" class="mb-2 block text-sm font-medium text-slate-800">Neighborhood / Community</label>
+                  <input id="neighborhood" name="neighborhood" type="text" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--teal)] focus:ring-2 focus:ring-teal-200" />
+                </div>
+              </div>
+
+              <div>
+                <label for="interest" class="mb-2 block text-sm font-medium text-slate-800">How would you like to help?</label>
+                <select id="interest" name="interest" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition focus:border-[var(--teal)] focus:ring-2 focus:ring-teal-200">
+                  <option>Campaign Updates</option>
+                  <option>Volunteer</option>
+                  <option>Host a Yard Sign</option>
+                  <option>Share an Issue</option>
+                  <option>Attend an Event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="mb-2 block text-sm font-medium text-slate-800">Message</label>
+                <textarea id="message" name="message" rows="5" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[var(--teal)] focus:ring-2 focus:ring-teal-200"></textarea>
+              </div>
+
+              <input type="hidden" name="source" value="Campaign Website" />
+
+              <label class="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                <input id="consent" name="consent" type="checkbox" required class="mt-1 h-4 w-4 rounded border-slate-300 text-[var(--teal)] focus:ring-teal-300" />
+                <span>I agree to be contacted by the campaign by email, phone, or text.</span>
+              </label>
+
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <button id="submitBtn" type="submit" class="inline-flex items-center justify-center rounded-full bg-[var(--navy)] px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0c2238] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]">Send Message</button>
+                <p class="text-xs leading-5 text-slate-500">By submitting, you agree the campaign may contact you using the information provided.</p>
+              </div>
+
+              <div id="formStatus" class="hidden rounded-2xl border p-4 text-sm"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================================ -->
+  <!-- FOOTER: Campaign disclaimer, placeholder legal note, and placeholder links   -->
+  <!-- Features: Visible disclaimer and required privacy/contact placeholders        -->
+  <!-- ============================================================================ -->
+  <footer data-section="footer" class="border-t border-slate-200 bg-[var(--navy)] text-white">
+    <div class="mx-auto max-w-7xl px-4 py-10 md:px-6 lg:px-8">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="text-lg font-semibold">Paid for by Alan Perry for Mayor</p>
+          <p class="mt-2 max-w-2xl text-sm leading-6 text-white/75">Campaign committee must confirm the legally required disclaimer before launch.</p>
+        </div>
+        <div class="flex gap-5 text-sm">
+          <a href="#home" class="text-white/80 hover:text-white">Privacy</a>
+          <a href="#get-involved" class="text-white/80 hover:text-white">Contact</a>
+        </div>
+      </div>
+      <p class="mt-8 text-xs text-white/55">Hilton Head Island, South Carolina</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== MOBILE MENU TOGGLE =====
+    // Purpose: Open and close the mobile navigation menu for small screens
+    (function () {
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      if (btn && menu) {
+        btn.addEventListener('click', function () {
+          const isHidden = menu.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(!isHidden));
+        });
+      }
+    })();
+
+    // ===== LEAD FORM SUBMISSION =====
+    // Purpose: Send campaign lead form data to the required webhook and show success/error states
+    (function () {
+      const form = document.getElementById('leadForm');
+      const status = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('submitBtn');
+      const endpoint = 'https://paymegpt.com/api/webhooks/flow/4308/fd8608b7764784708b481ae6225ee105a913e9884bdcc9f020cec7102e23f0c1';
+
+      function showStatus(type, message) {
+        status.className = 'rounded-2xl border p-4 text-sm';
+        status.classList.remove('hidden');
+        if (type === 'success') {
+          status.classList.add('border-emerald-200', 'bg-emerald-50', 'text-emerald-800');
+        } else {
+          status.classList.add('border-rose-200', 'bg-rose-50', 'text-rose-800');
+        }
+        status.textContent = message;
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const fd = new FormData(form);
+          const consent = document.getElementById('consent').checked;
+          if (!fd.get('contactName') || !fd.get('contactEmail') || !consent) {
+            showStatus('error', 'Please complete the required fields and confirm consent before submitting.');
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+
+          const payload = {
+            contactName: fd.get('contactName') || undefined,
+            contactEmail: fd.get('contactEmail') || undefined,
+            contactPhone: fd.get('contactPhone') || undefined,
+            data: {
+              neighborhood: fd.get('neighborhood') || '',
+              interest: fd.get('interest') || '',
+              message: fd.get('message') || '',
+              source: fd.get('source') || 'Campaign Website',
+              consent: 'Yes'
+            }
+          };
+
+          fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+          .then(function (r) { return r.json(); })
+          .then(function () {
+            form.reset();
+            form.classList.add('hidden');
+            status.classList.remove('hidden');
+            status.className = 'rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-emerald-800';
+            status.innerHTML = '<strong>Thank you!</strong> We\'ll be in touch shortly.';
+          })
+          .catch(function () {
+            showStatus('error', 'Something went wrong while sending your message. Please try again in a moment.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          });
+        });
+      }
+    })();
+  </script>
+
+  <script src="https://paymegpt.com/widget.js" data-widget="66991716" async></script>
+</body>
+</html>
