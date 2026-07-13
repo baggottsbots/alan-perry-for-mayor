@@ -618,13 +618,18 @@
 
       <script>
         document.addEventListener('DOMContentLoaded', () => {
-          const form = document.getElementById('leadForm');
+          let form = document.getElementById('leadForm');
           const successPanel = document.getElementById('successPanel');
-          const formError = document.getElementById('formError');
-          const submitBtn = document.getElementById('submitBtn');
-          const resetBtn = document.getElementById('resetFormBtn');
 
           if (!form) return;
+
+          const cleanForm = form.cloneNode(true);
+          form.parentNode.replaceChild(cleanForm, form);
+          form = cleanForm;
+
+          const formError = form.querySelector('#formError');
+          const submitBtn = form.querySelector('#submitBtn');
+          const resetBtn = document.getElementById('resetFormBtn');
 
           form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -645,7 +650,8 @@
             const interest = formData.get('interest') || '';
             const message = formData.get('message') || '';
             const source = formData.get('source') || 'Campaign Website';
-            const consent = form.querySelector('#consent')?.checked || false;
+            const consentChecked = form.querySelector('#consent')?.checked || false;
+            const consent = consentChecked ? "Yes" : "No";
 
             const payload = {
               contactName,
@@ -674,7 +680,7 @@
               </svg> Sending...`;
 
             try {
-              const actionUrl = form.getAttribute('action') || 'https://formspree.io/f/xoqgkyrj';
+              const actionUrl = 'https://paymegpt.com/api/webhooks/flow/4308/fd8608b7764784708b481ae6225ee105a913e9884bdcc9f020cec7102e23f0c1';
               
               const response = await fetch(actionUrl, {
                 method: 'POST',
@@ -690,7 +696,7 @@
               }
 
               form.reset();
-              form.classList.add('hidden');
+              form.classList.add('hidden');  
               successPanel.classList.remove('hidden');
               successPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             } catch (error) {
